@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './App';
 import reportWebVitals from './reportWebVitals';
-import axios from 'axios';
+import fetch from "node-fetch";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,20 +12,61 @@ root.render(
   </React.StrictMode>
 );
 
-const getCourseInfo = async (course) => {
-  const url = 'https://api.peterportal.org/rest/v0/schedule/soc?';
+function MyData() {
+  // TODO 3: Create a state to store API response
+  const [course, setCourse] = useState()
+  
+  useEffect(() => {
+  // TODO 1: Setup fetch request
+  let url = "https://api.peterportal.org/rest/v0/schedule/soc";
+  const options = {
+    method: "GET",
+    headers: { "Content-Type": "application/json" }
+  };
 
+  const params = new URLSearchParams({
+    term: "2018 Fall",
+    department: "COMPSCI",
+    courseNumber: '161'
+  });
+
+  url = url + '?' + params.toString();
+  url = url.replace("+", "%20")
+  console.log(url);
+
+
+  // TODO 2: Create function to fetch our data from the API
+
+  // TODO 4: Fetch data from the API on load
+    function loadCourse() {
+      fetch(url, options)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        setCourse(result);
+      })
+    }
+    loadCourse();
+  }, []);
+
+}
+
+export default MyData;
+/*
+/*
   const response = await fetch(url + course);
   const data = await response.json();
   console.log('data', data);
 
   // Process data into dictionary of different sections
-  
+  const courses = data.courses
+  console.log('courses', courses)
+*/
 
-};
 
-console.log('hi');
-getCourseInfo('term=2018%20Fall&department=COMPSCI&courseNumber=161');
+
+//console.log('hi');
+//getCourseInfo('term=2022%20Winter&department=COMPSCI&courseNumber=121');
 
 
 // function Course(props) {

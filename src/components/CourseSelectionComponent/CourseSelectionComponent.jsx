@@ -10,6 +10,7 @@ const CourseSelectionComponent = () => {
             <CourseInputComponent classNum={1}/>
             <CourseInputComponent classNum={2}/>
             <CourseInputComponent classNum={3}/>
+            <CourseInputComponent classNum={4}/>
             <button type="button" className={styles['get-schedule-button']}>get schedule</button>
         </div>
     );

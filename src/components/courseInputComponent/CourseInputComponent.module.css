@@ -24,10 +24,13 @@
     margin: 0.25em;
 }
 
-/* .input-text-field:focus {
+.input-text-field:focus {
     padding: 0.35em;
     border-radius: 0.25em;
-    border: solid 1px red;
+    /* border: solid 1px red; */
+    border: none;
     margin: 0.25em;
-} */
+    box-shadow: 0 0 0.25em 0.125em #88B552;
+    outline: none;
+}
 
