@@ -15,7 +15,7 @@ root.render(
 function MyData() {
   // TODO 3: Create a state to store API response
   const [course, setCourse] = useState()
-  
+
   useEffect(() => {
   // TODO 1: Setup fetch request
   let url = "https://api.peterportal.org/rest/v0/schedule/soc";

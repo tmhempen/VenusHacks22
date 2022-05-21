@@ -3,7 +3,6 @@ import styles from './CourseSelectionComponent.module.css';
 import CourseInputComponent from '../courseInputComponent/CourseInputComponent';
 
 const CourseSelectionComponent = () => {
-    // const classNum = 1;
 
     return (
         <div className={styles['course-selection-component-container']}>
