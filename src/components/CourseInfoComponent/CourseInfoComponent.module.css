@@ -1,0 +1,18 @@
+.course-info-component-container {
+    background-color: #eae0cf;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1em;
+    margin: 1.5em;
+    padding: 1em;
+
+}
+
+.course-logistics {
+    text-align: left;
+}
+
+.course-code {
+    text-align: right;
+    padding: 0 0 0 4em;
+}

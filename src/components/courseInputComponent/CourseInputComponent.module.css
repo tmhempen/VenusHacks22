@@ -1,0 +1,33 @@
+.course-input-component-container {
+    border-radius: 1em;
+    margin: 1.5em;
+}
+
+.class-number-desc {
+    padding: 2em;
+}
+
+.course-input-component-container {
+    font-size: 1em;
+    background-color: #CFE1B9;
+    padding: 1em;
+}
+
+.input-label {
+    padding: 1em;
+}
+
+.input-text-field {
+    padding: 0.35em;
+    border-radius: 0.25em;
+    border: none;
+    margin: 0.25em;
+}
+
+/* .input-text-field:focus {
+    padding: 0.35em;
+    border-radius: 0.25em;
+    border: solid 1px red;
+    margin: 0.25em;
+} */
+
